@@ -5,7 +5,7 @@ class ClassComponent extends Component {
     return (
       <div>
         <h1 className="text-3xl font-bold bg-red-400 text-white">
-          Class Component
+          Class Component add
         </h1>
       </div>
     );
