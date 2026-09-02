@@ -32,7 +32,7 @@ function Tutorial() {
     <>
       <div>
         <h1 className="text-3xl font-bold bg-red-400 text-white">
-          Tutorial Component
+          Tutorial Component added
         </h1>
       </div>
       <FreeCourse />

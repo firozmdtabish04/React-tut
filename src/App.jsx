@@ -1,3 +1,4 @@
+import { Routes, Route } from "react-router-dom";
 import ClassComponent from "./component/ClassComponent";
 import Tutorial from "./component/Tutorial";
 import Footer from "./Footer";
@@ -10,8 +11,15 @@ function App() {
       {/* <Tutorial /> */}
       {/* <Footer /> */}
 
-      <ClassComponent />
-    </>
+      {/* <ClassComponent /> */}
+
+      <Routes>
+        <Route path="/" element={<Navbar />} />
+        <Route path="/tutorial" element={<Tutorial />} />
+        <Route path="/footer" element={<Footer />} />
+        <Route path="/classcomponent" element={<ClassComponent />} />
+      </Routes>
+    </> 
   );
 }
 export default App;
