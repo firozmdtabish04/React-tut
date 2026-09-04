@@ -12,6 +12,7 @@ import UseDeferredDemo from "./UseDeferredDemo";
 import UseImperativeDemo from "./UseImperativeDemo";
 import UseLayoutDemo from "./UseLayoutDemo";
 import CustomHookDemo from "./CustomHookDemo";
+import EventHandlingDemo from "../EventHandling";
 
 const hooks = [
   {
@@ -62,6 +63,19 @@ const hooks = [
     ],
     demo: <UseRefDemo />,
   },
+  {
+    title: "Event Handling",
+    theory:
+      "React provides synthetic events to handle user interactions like clicks and form submissions.",
+    syntax: "function handleClick() { /* code */ }",
+    points: [
+      "Use camelCase for event names.",
+      "Pass functions, not strings.",
+      "Can handle keyboard and mouse events.",
+    ],
+    demo: <EventHandlingDemo />,
+  },
+
   {
     title: "5. useMemo",
     theory: "useMemo caches expensive calculations for better performance.",
