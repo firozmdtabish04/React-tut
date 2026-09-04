@@ -1,23 +1,35 @@
 import { useState, useEffect } from "react";
 
 function UseEffectDemo() {
-  const [count, setCount] = useState(0);
+  const [posts, setPosts] = useState([]);
+  console.log(posts);
 
   useEffect(() => {
-    document.title = `Count: ${count}`;
-  }, [count]);
+    const fetchPosts = async () => {
+      const response = await fetch(
+        "https://jsonplaceholder.typicode.com/posts",
+      );
+      const data = await response.json();
+      setPosts(data);
+    };
+    fetchPosts();
+  }, []);
 
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-bold">useEffect</h2>
-      <button
-        onClick={() => setCount(count + 1)}
-        className="px-4 py-2 bg-green-500 text-white rounded"
-      >
-        Count: {count}
-      </button>
-    </div>
+    <>
+      <h3>Api Fetching using useEffect hook</h3>
+
+      <div>
+        {posts.map((post) => (
+          <div key={post.id}>
+            {" "}
+            <br />
+            <h4>{post.title}</h4> <br />
+            <p>{post.body}</p>
+          </div>
+        ))}
+      </div>
+    </>
   );
 }
-
 export default UseEffectDemo;
