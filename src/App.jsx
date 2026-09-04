@@ -7,6 +7,7 @@ import Props from "./component/Props";
 import ObjeProps from "./component/ObjeProps";
 import Course from "./component/Course";
 import HooksComp from "./component/hook/HooksComp";
+import Form from "./component/Form";
 
 function App() {
   return (
@@ -29,7 +30,8 @@ function App() {
 
       {/* <Course /> */}
 
-      <HooksComp />
+      {/* <HooksComp /> */}
+      <Form />
     </>
   );
 }
