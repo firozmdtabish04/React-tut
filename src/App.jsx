@@ -6,6 +6,7 @@ import Navbar from "./Navbar";
 import Props from "./component/Props";
 import ObjeProps from "./component/ObjeProps";
 import Course from "./component/Course";
+import HooksComp from "./component/hook/HooksComp";
 
 function App() {
   return (
@@ -26,7 +27,9 @@ function App() {
       {/* <Props /> */}
       {/* <ObjeProps /> */}
 
-      <Course />
+      {/* <Course /> */}
+
+      <HooksComp />
     </>
   );
 }
