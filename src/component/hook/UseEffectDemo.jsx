@@ -12,7 +12,7 @@ function UseEffectDemo() {
       const data = await response.json();
       setPosts(data);
     };
-    fetchPosts();
+    // fetchPosts();
   }, []);
 
   return (
