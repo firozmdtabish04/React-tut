@@ -8,6 +8,7 @@ import ObjeProps from "./component/ObjeProps";
 import Course from "./component/Course";
 import HooksComp from "./component/hook/HooksComp";
 import Form from "./component/Form";
+import Conditional from "./auth/Conditional";
 
 function App() {
   return (
@@ -31,7 +32,9 @@ function App() {
       {/* <Course /> */}
 
       {/* <HooksComp /> */}
-      <Form />
+      {/* <Form /> */}
+
+      <Conditional />
     </>
   );
 }
