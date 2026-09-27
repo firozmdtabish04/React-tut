@@ -10,7 +10,11 @@ import HooksComp from "./component/hook/HooksComp";
 import Form from "./component/Form";
 import Conditional from "./auth/Conditional";
 import List from "./component/List";
-
+// import Login from "./auth/Login";
+import SignIn from "./SignIn";
+import Login from "./Login";
+import Register from "./Register";
+import Home from "./Home";
 function App() {
   return (
     <>
@@ -36,7 +40,15 @@ function App() {
       {/* <Form /> */}
 
       {/* <Conditional /> */}
-      <List />
+      {/* <List /> */}
+      {/* <SignIn /> */}
+      {/* <Navbar /> */}
+      {/* <Login /> */}
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Register />} />
+        <Route path="/home" element={<Home />} />
+      </Routes>
     </>
   );
 }

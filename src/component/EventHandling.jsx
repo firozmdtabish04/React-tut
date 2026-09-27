@@ -21,7 +21,7 @@ function EventHandling() {
 
   // onMouseEnter
   const handleMouseEnter = () => {
-    console.log("Mouse entered");
+    console.log("Mouse en tered");
   };
 
   // onMouseLeave
