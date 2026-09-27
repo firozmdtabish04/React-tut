@@ -1,11 +1,10 @@
+import { Target } from "lucide-react";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 function Register() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [phone, setPhone] = useState("");
-  const [username, setUsername] = useState("");
   const navigate = useNavigate();
   function handleRegister(e) {
     e.preventDefault();
@@ -13,64 +12,40 @@ function Register() {
       name,
       email,
       password,
-      phone,
-      username,
     };
     localStorage.setItem("user", JSON.stringify(user));
-    alert("Registration Successfully");
+    alert("Welcome to learning");
     navigate("/login");
-
-    setName("");
     setEmail("");
-    setPassword("");
-    setPhone("");
-    setUsername("");
+    setName("");
+    setPassword;
   }
 
   return (
-    <>
-      <div>
-        <div>
-          <form action="" onSubmit={handleRegister}>
-            <input
-              type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              placeholder="enter name"
-              required
-            />
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="enter email"
-              required
-            />
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder="enter password"
-              required
-            />
-            <input
-              type="text"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              placeholder="enter username"
-              required
-            />
-            <input
-              type="tel"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              placeholder="enter phone"
-            />
-            <button type="submit">Submit</button>
-          </form>
-        </div>
-      </div>
-    </>
+    <div>
+      <form action="" onSubmit={handleRegister}>
+        <input
+          type="email"
+          placeholder="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+        <input
+          type="password"
+          placeholder="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <button type="submit">submit</button>
+      </form>
+    </div>
   );
 }
+
 export default Register;
