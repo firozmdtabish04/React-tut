@@ -15,6 +15,7 @@ import SignIn from "./SignIn";
 import Login from "./Login";
 import Register from "./Register";
 import Home from "./Home";
+import Card from "./Card";
 function App() {
   return (
     <>
@@ -45,9 +46,10 @@ function App() {
       {/* <Navbar /> */}
       {/* <Login /> */}
       <Routes>
-        <Route path="/login" element={<Login />} />
+        {/* <Route path="/login" element={<Login />} />
         <Route path="/" element={<Register />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/home" element={<Home />} /> */}
+      <Route path="/" element={<Card/>}/>
       </Routes>
     </>
   );
