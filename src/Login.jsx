@@ -19,7 +19,9 @@ function Login() {
     e.preventDefault();
     const user = JSON.parse(localStorage.getItem("user"));
     if (!user) {
-      alert("wrong credential");
+      alert("No user found. Please register first.");
+      navigate("/");
+      return;
     }
     if (email === user.email && password === user.password) {
       alert("welcome back dear");

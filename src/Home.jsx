@@ -1,11 +1,12 @@
-import React from 'react'
-
+import React from "react";
+import Navbar from "./Navbar";
 function Home() {
   return (
     <div>
+      <Navbar />
       <h1 className="text-3xl font-bold">Welcome to the Home Page</h1>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;

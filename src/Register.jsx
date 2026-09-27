@@ -18,7 +18,7 @@ function Register() {
     navigate("/login");
     setEmail("");
     setName("");
-    setPassword;
+    setPassword("");
   }
 
   return (
